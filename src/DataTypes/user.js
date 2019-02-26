@@ -16,9 +16,9 @@ class DiscordUser{
         this.discriminator = discriminator
         this.avatar = `https://cdn.discordapp.com/${id}/${avatar}.${avatar.startsWith('a_') ? 'gif' : 'png'}`
         if(bot)
-            this.bot = bot
+            this.isBot = bot
         else
-            this.bot = false
+            this.isBot = false
         if(nitro == 1)
             this.nitro = 'Nitro Classic'
         else if(nitro == 2)
