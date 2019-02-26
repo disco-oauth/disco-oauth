@@ -26,205 +26,205 @@ And you're ready to go!
 
 # Class Structure
 
-* **OAuthClient**
+## OAuthClient
 
-  This is the class that is imported on using the `require()` function.
+This is the class that is imported on using the `require()` function.
 
-  * **Constructor**
+* **Constructor**
 
-    ```javascript
-    const oauthClient = new OAuthClient(client_id, client_secret);
+  ```javascript
+  const oauthClient = new OAuthClient(client_id, client_secret);
+  ```
+
+  **client_id** and **client_secret** can be found on your [developer's application page.](https://discordapp.com/developers/applications/)
+
+---
+
+* **Properties**
+
+  * **id :** *The client ID of your application.*
+  * **secret :** *The client secret of your application.*
+  * **creds :** *The* `Basic` *token of your application.*
+
+  ---
+
+  The following are only available once you have used the `getAccess()` method and an access token has been successfully generated.
+
+  * **authScope :** *The scopes for which the access token was requested.*
+  * **redirect :** *The redirect URI for which the access token was requested.*
+  * **access :** *An* `Access` *object.*
+  * **expiry :** *The* `timestamp` *when your access token will expire.*
+
+  ---
+
+* **Methods**
+
+  * **getAccess(code, scopes, redirectUri)**
+
+    This method has to be used before using any other, it takes in 3 parameters: -
+
+    1. **Code :** *The [authorization code](https://discordapp.com/developers/docs/topics/oauth2#authorization-code-grant) received.*
+    2. **Scopes :** *An array of [scopes](https://discordapp.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes).*
+    3. **redirectUri :** *The redirect URI registered on your developer's application page.*
+
+    **Example :-**
+
+    ```js
+    oauthClient.getAccess(code,
+                         ['identify', 'email', 'connections', 'guilds'],
+                         'http://localhost:3000/login');
     ```
 
-    **client_id** and **client_secret** can be found on your [developer's application page.](https://discordapp.com/developers/applications/)
+    **Returns :**  `null`
 
-  ---
+    **Raises :** `ConnectionError` when unable to retrieve access token.
+    		`ParamError` when one of the parameters are not specified.
 
-  * **Properties**
+  * **refreshAccess()**
 
-    * **id :** *The client ID of your application.*
-    * **secret :** *The client secret of your application.*
-    * **creds :** *The* `Basic` *token of your application.*
+    This method is used to refresh your access token in case it expires.
 
-    ---
+    **Example :-**
 
-    The following are only available once you have used the `getAccess()` method and an access token has been successfully generated.
+    ```js
+    oauthClient.refreshAccess();
+    ```
 
-    * **authScope :** *The scopes for which the access token was requested.*
-    * **redirect :** *The redirect URI for which the access token was requested.*
-    * **access :** *An* `Access` *object.*
-    * **expiry :** *The* `timestamp` *when your access token will expire.*
+    **Returns :** `null`
 
-    ---
+    **Raises :** `ConnectionError` when unable to refresh the access token.
 
-  * **Methods**
+  * **getAuthorizedUser()**
 
-    * **getAccess(code, scopes, redirectUri)**
+    This method can be used to retrieve the authorized user's details.
+    **Example :-**
 
-      This method has to be used before using any other, it takes in 3 parameters: -
+    ```js
+    let user = await oauthClient.getAuthorizedUser();
+    ```
 
-      1. **Code :** *The [authorization code](https://discordapp.com/developers/docs/topics/oauth2#authorization-code-grant) received.*
-      2. **Scopes :** *An array of [scopes](https://discordapp.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes).*
-      3. **redirectUri :** *The redirect URI registered on your developer's application page.*
+    
 
-      **Example :-**
+    **Returns :** A [`User`](#User) object.
+    **Raises :** `ConnectionError` when unable to retrieve the user's details.
+    **Note :** *This needs you to have the* `identify` *scope.*
 
-      ```js
-      oauthClient.getAccess(code,
-                           ['identify', 'email', 'connections', 'guilds'],
-                           'http://localhost:3000/login');
-      ```
+  * **getAuthorizedUserGuilds()**
 
-      **Returns :**  `null`
+    This method can be used to retrieve the authorized user's guilds.
 
-      **Raises :** `ConnectionError` when unable to retrieve access token.
-      		`ParamError` when one of the parameters are not specified.
+    **Example :-**
 
-    * **refreshAccess()**
+    ```js
+    let guilds = await oauthClient.getAuthorizedUserGuilds();
+    ```
 
-      This method is used to refresh your access token in case it expires.
+    
 
-      **Example :-**
+    **Returns :** An array of [`PartialGuild`](#PartialGuild) objects.
+    **Raises :** `ConnectionError` when unable to retrieve guilds.
 
-      ```js
-      oauthClient.refreshAccess();
-      ```
+    ***Note :*** *This needs you to have the* `guilds` *scope.*
 
-      **Returns :** `null`
+  * **getAuthorizedUserConnections()**
 
-      **Raises :** `ConnectionError` when unable to refresh the access token.
+    This method can be used to retrieve the authorized user's connected accounts.
 
-    * **getAuthorizedUser()**
+    **Example :-**
 
-      This method can be used to retrieve the authorized user's details.
-      **Example :-**
+    ```js
+    let connections = await oauthClient.getAuthorizedUserConnections();
+    ```
 
-      ```js
-      let user = await oauthClient.getAuthorizedUser();
-      ```
+    
 
-      
+    **Returns :** An array of [`Connection`](#Connection) objects.
+    **Raises :** `ConnectionError` when unable to retrieve connections.
 
-      **Returns :** A `User` object.
-      **Raises :** `ConnectionError` when unable to retrieve the user's details.
-      **Note :** *This needs you to have the* `identify` *scope.*
+    ***Note :*** *This needs you to have the* `connections` *scope.*
 
-    * **getAuthorizedUserGuilds()**
+---
 
-      This method can be used to retrieve the authorized user's guilds.
+## Access
 
-      **Example :-**
+```xml
+Access
+	|-- Token => Your access token
+	|
+	|-- Type => The token type. ( Bearer by default )
+	|
+	|-- Expiry => The date-time when your access token will expire. (String format)
+	|
+	|-- Refresh => Your refresh token. (Used during `refreshAccess()` )
+	|
+	|-- Scope => The scopes in a string format. (formatted as URI)
+	----------------------------------------------------------------------
+```
 
-      ```js
-      let guilds = await oauthClient.getAuthorizedUserGuilds();
-      ```
+---
 
-      
+## User
 
-      **Returns :** An array of `PartialGuild` objects.
-      **Raises :** `ConnectionError` when unable to retrieve guilds.
+```xml
+User
+	|-- ID => The user ID.
+	|
+	|-- Username => The visible username.
+	|
+	|-- Discriminator => The discriminator of the user.
+	|
+	|-- Avatar => A link to the user's avatar.
+	|
+	|-- isBot => Whether the user is a bot user or human. (Boolean value)
+	|
+	|-- Nitro => The nitro type.
+	|
+	|-- Email => The user's email ID. (This needs you to have the 'email' scope)
+	|
+	|-- emailVerified => Whether the user has verified email or not. (Boolean value)
+		(Also needs 'email' scope)
+	-------------------------------------------------------------------
+```
 
-      ***Note :*** *This needs you to have the* `guilds` *scope.*
+---
 
-    * **getAuthorizedUserConnections()**
+## PartialGuild
 
-      This method can be used to retrieve the authorized user's connected accounts.
+```xml
+Guild
+	|-- ID => The guild's ID.
+	|
+	|-- Name => The guild's name.
+	|
+	|-- Icon => The guild's icon URL.
+	|
+	|-- Owner => Whether the authorized user is the owner of the guild.
+	|
+	|-- userPerms => An Array of the Authorized User's Permmissions.
+	-------------------------------------------------------------------------
+```
 
-      **Example :-**
+[More on user Permissions here](#Permissions-List) 
 
-      ```js
-      let connections = await oauthClient.getAuthorizedUserConnections();
-      ```
+---
 
-      
+## Connection
 
-      **Returns :** An array of `Connection` objects.
-      **Raises :** `ConnectionError` when unable to retrieve connections.
-
-      ***Note :*** *This needs you to have the* `connections` *scope.*
-
-  ---
-
-* **Access**
-
-  ```xml
-  Access
-  	|-- Token => Your access token
-  	|
-  	|-- Type => The token type. ( Bearer by default )
-  	|
-  	|-- Expiry => The date-time when your access token will expire. (String format)
-  	|
-  	|-- Refresh => Your refresh token. (Used during `refreshAccess()` )
-  	|
-  	|-- Scope => The scopes in a string format. (formatted as URI)
-  	----------------------------------------------------------------------
-  ```
-
-  ---
-
-* **User**
-
-  ```xml
-  User
-  	|-- ID => The user ID.
-  	|
-  	|-- Username => The visible username.
-  	|
-  	|-- Discriminator => The discriminator of the user.
-  	|
-  	|-- Avatar => A link to the user's avatar.
-  	|
-  	|-- isBot => Whether the user is a bot user or human. (Boolean value)
-  	|
-  	|-- Nitro => The nitro type.
-  	|
-  	|-- Email => The user's email ID. (This needs you to have the 'email' scope)
-  	|
-  	|-- emailVerified => Whether the user has verified email or not. (Boolean value)
-  		(Also needs 'email' scope)
-  	-------------------------------------------------------------------
-  ```
-
-  ---
-
-* **PartialGuild**
-
-  ```xml
-  Guild
-  	|-- ID => The guild's ID.
-  	|
-  	|-- Name => The guild's name.
-  	|
-  	|-- Icon => The guild's icon URL.
-  	|
-  	|-- Owner => Whether the authorized user is the owner of the guild.
-  	|
-  	|-- userPerms => An Array of the Authorized User's Permmissions.
-  	-------------------------------------------------------------------------
-  ```
-
-  [More on user Permissions here](https://discordapp.com/developers/docs/topics/permissions#permissions-bitwise-permission-flags) (Note: the permissions are returned as string not their integer flags.)
-
-  ---
-
-* **Connection**
-
-  ```xml
-  Connection
-  	|-- isVerified => whether the connected account has been verified.
-  	|
-  	|-- Service => The service to which the account is connected.
-  	|
-  	|-- showActivity => whether the activity is shown as status or not.
-  	|
-  	|-- friendSync => Whether the friends are synced or not.
-  	|
-  	|-- Username => The username of the user at the service.
-  	|
-  	|-- isVisible => Whether the connection is visible on the user profile
-  	------------------------------------------------------------------------
-  ```
+```xml
+Connection
+	|-- isVerified => whether the connected account has been verified.
+	|
+	|-- Service => The service to which the account is connected.
+	|
+	|-- showActivity => whether the activity is shown as status or not.
+	|
+	|-- friendSync => Whether the friends are synced or not.
+	|
+	|-- Username => The username of the user at the service.
+	|
+	|-- isVisible => Whether the connection is visible on the user profile
+	------------------------------------------------------------------------
+```
 
 ---
 
