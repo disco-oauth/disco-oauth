@@ -26,11 +26,11 @@ And you're ready to go!
 
 # Class Structure
 
-* ## OAuthClient
+* **OAuthClient**
 
   This is the class that is imported on using the `require()` function.
 
-  * ### Constructor
+  * **Constructor**
 
     ```javascript
     const oauthClient = new OAuthClient(client_id, client_secret);
@@ -40,7 +40,7 @@ And you're ready to go!
 
   ---
 
-  * ### Properties
+  * **Properties**
 
     * **id :** *The client ID of your application.*
     * **secret :** *The client secret of your application.*
@@ -57,7 +57,7 @@ And you're ready to go!
 
     ---
 
-  * ### Methods
+  * **Methods**
 
     * **getAccess(code, scopes, redirectUri)**
 
@@ -145,7 +145,7 @@ And you're ready to go!
 
   ---
 
-* ## Access
+* **Access**
 
   ```xml
   Access
@@ -163,7 +163,7 @@ And you're ready to go!
 
   ---
 
-* ## User
+* **User**
 
   ```xml
   User
@@ -188,7 +188,7 @@ And you're ready to go!
 
   ---
 
-* ## PartialGuild
+* **PartialGuild**
 
   ```xml
   Guild
@@ -208,7 +208,7 @@ And you're ready to go!
 
   ---
 
-* ## Connection
+* **Connection**
 
   ```xml
   Connection
