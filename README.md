@@ -1,4 +1,4 @@
-# disco-oAuth
+# disco-OAuth
 
 This is a library to make oauth requests to discord. It is easy to use and implement in your app, given below are the docs.
 
@@ -97,6 +97,13 @@ And you're ready to go!
     * **getAuthorizedUser()**
 
       This method can be used to retrieve the authorized user's details.
+      **Example :-**
+
+      ```js
+      let user = await oauthClient.getAuthorizedUser();
+      ```
+
+      
 
       **Returns :** A `User` object.
       **Raises :** `ConnectionError` when unable to retrieve the user's details.
@@ -106,4 +113,158 @@ And you're ready to go!
 
       This method can be used to retrieve the authorized user's guilds.
 
-      **Returns :** A `PartialGuild` object.
+      **Example :-**
+
+      ```js
+      let guilds = await oauthClient.getAuthorizedUserGuilds();
+      ```
+
+      
+
+      **Returns :** An array of `PartialGuild` objects.
+      **Raises :** `ConnectionError` when unable to retrieve guilds.
+
+      ***Note :*** *This needs you to have the* `guilds` *scope.*
+
+    * **getAuthorizedUserConnections()**
+
+      This method can be used to retrieve the authorized user's connected accounts.
+
+      **Example :-**
+
+      ```js
+      let connections = await oauthClient.getAuthorizedUserConnections();
+      ```
+
+      
+
+      **Returns :** An array of `Connection` objects.
+      **Raises :** `ConnectionError` when unable to retrieve connections.
+
+      ***Note :*** *This needs you to have the* `connections` *scope.*
+
+  ---
+
+* ## Access
+
+  ```xml
+  Access
+  	|-- Token => Your access token
+  	|
+  	|-- Type => The token type. ( Bearer by default )
+  	|
+  	|-- Expiry => The date-time when your access token will expire. (String format)
+  	|
+  	|-- Refresh => Your refresh token. (Used during `refreshAccess()` )
+  	|
+  	|-- Scope => The scopes in a string format. (formatted as URI)
+  	----------------------------------------------------------------------
+  ```
+
+  ---
+
+* ## User
+
+  ```xml
+  User
+  	|-- ID => The user ID.
+  	|
+  	|-- Username => The visible username.
+  	|
+  	|-- Discriminator => The discriminator of the user.
+  	|
+  	|-- Avatar => A link to the user's avatar.
+  	|
+  	|-- isBot => Whether the user is a bot user or human. (Boolean value)
+  	|
+  	|-- Nitro => The nitro type.
+  	|
+  	|-- Email => The user's email ID. (This needs you to have the 'email' scope)
+  	|
+  	|-- emailVerified => Whether the user has verified email or not. (Boolean value)
+  		(Also needs 'email' scope)
+  	-------------------------------------------------------------------
+  ```
+
+  ---
+
+* ## PartialGuild
+
+  ```xml
+  Guild
+  	|-- ID => The guild's ID.
+  	|
+  	|-- Name => The guild's name.
+  	|
+  	|-- Icon => The guild's icon URL.
+  	|
+  	|-- Owner => Whether the authorized user is the owner of the guild.
+  	|
+  	|-- userPerms => An Array of the Authorized User's Permmissions.
+  	-------------------------------------------------------------------------
+  ```
+
+  [More on user Permissions here](https://discordapp.com/developers/docs/topics/permissions#permissions-bitwise-permission-flags) (Note: the permissions are returned as string not their integer flags.)
+
+  ---
+
+* ## Connection
+
+  ```xml
+  Connection
+  	|-- isVerified => whether the connected account has been verified.
+  	|
+  	|-- Service => The service to which the account is connected.
+  	|
+  	|-- showActivity => whether the activity is shown as status or not.
+  	|
+  	|-- friendSync => Whether the friends are synced or not.
+  	|
+  	|-- Username => The username of the user at the service.
+  	|
+  	|-- isVisible => Whether the connection is visible on the user profile
+  	------------------------------------------------------------------------
+  ```
+
+---
+
+
+
+# Permissions List
+
+| Permissions           | Description |
+| --------------------- | ----------- |
+| CREATE_INSTANT_INVITE | Allows creation of instant invites |
+| KICK_MEMBERS          | Allows kicking members |
+| BAN_MEMBERS           | Allows banning members |
+| ADMINISTRATOR         | Allows all permissions and bypasses channel permission overwrites |
+| MANAGE_CHANNELS       | Allows management and editing of channels |
+| MANAGE_GUILD          | Allows management and editing of the guild |
+| ADD_REACTIONS         | Allows for the addition of reactions to messages |
+| VIEW_AUDIT_LOG        | Allows for viewing of audit logs |
+| VIEW_CHANNEL          | Allows guild members to view a channel, which includes reading messages in text channels |
+| SEND_MESSAGES         | Allows for sending messages in a channel |
+| SEND_TTS_MESSAGES     | Allows for sending of `/tts` messages |
+| MANAGE_MESSAGES       | Allows for deletion of other users messages |
+| EMBED_LINKS           | Links sent by users with this permission will be auto-embedded |
+| ATTACH_FILES          | Allows for uploading images and files |
+| READ_MESSAGE_HISTORY  | Allows for reading of message history |
+| MENTION_EVERYONE      | Allows for using the `@everyone` tag to notify all users in a channel, and the `@here` tag to notify all online users in a channel |
+| USE_EXTERNAL_EMOJIS   | Allows the usage of custom emojis from other servers |
+| CONNECT               | Allows for joining of a voice channel |
+| SPEAK                 | Allows for speaking in a voice channel |
+| MUTE_MEMBERS          | Allows for muting members in a voice channel |
+| DEAFEN_MEMBERS        | Allows for deafening of members in a voice channel |
+| MOVE_MEMBERS          | Allows for moving of members between voice channels |
+| USE_VAD               | Allows for using voice-activity-detection in a voice channel |
+| PRIORITY_SPEAKER      | Allows for using priority speaker in a voice channel |
+| CHANGE_NICKNAME                      | Allows for modification of own nickname |
+| MANAGE_NICKNAMES | Allows for modification of other users nicknames |
+| MANAGE_ROLES | Allows management and editing of roles |
+| MANAGE_WEBHOOKS | Allows management and editing of webhooks |
+| MANAGE_EMOJIS | Allows management and editing of emojis |
+
+***Note :*** *These permissions are guild-wide and are not specific to individual channels.*
+
+---
+
