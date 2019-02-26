@@ -268,3 +268,13 @@ And you're ready to go!
 
 ---
 
+You can also get a working example how to use the library by [clicking here.](https://repl.it/@TheDrone7/disco-oauth-example)
+
+> Thanks for using the library
+>
+> Star the github repository if you appreciate the work
+>
+> Be sure to report me of any errors or help you might have observed.
+
+---
+
