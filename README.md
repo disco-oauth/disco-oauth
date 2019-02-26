@@ -52,7 +52,7 @@ This is the class that is imported on using the `require()` function.
 
   * **authScope :** *The scopes for which the access token was requested.*
   * **redirect :** *The redirect URI for which the access token was requested.*
-  * **access :** *An* `Access` *object.*
+  * **access :** *An* [`Access`](#access) *object.*
   * **expiry :** *The* `timestamp` *when your access token will expire.*
 
   ---
@@ -105,7 +105,7 @@ This is the class that is imported on using the `require()` function.
 
     
 
-    **Returns :** A [`User`](#User) object.
+    **Returns :** A [`User`](#user) object.
     **Raises :** `ConnectionError` when unable to retrieve the user's details.
     **Note :** *This needs you to have the* `identify` *scope.*
 
@@ -121,7 +121,7 @@ This is the class that is imported on using the `require()` function.
 
     
 
-    **Returns :** An array of [`PartialGuild`](#PartialGuild) objects.
+    **Returns :** An array of [`PartialGuild`](#partialguild) objects.
     **Raises :** `ConnectionError` when unable to retrieve guilds.
 
     ***Note :*** *This needs you to have the* `guilds` *scope.*
@@ -138,7 +138,7 @@ This is the class that is imported on using the `require()` function.
 
     
 
-    **Returns :** An array of [`Connection`](#Connection) objects.
+    **Returns :** An array of [`Connection`](#connection) objects.
     **Raises :** `ConnectionError` when unable to retrieve connections.
 
     ***Note :*** *This needs you to have the* `connections` *scope.*
