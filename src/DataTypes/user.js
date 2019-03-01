@@ -31,8 +31,6 @@ class DiscordUser{
             this.emailVerified = true
         else if(verified != undefined && !verified)
             this.emailVerified = false
-        else if (verified == undefined) 
-            this.emailVerified = undefined
     }
 
 }

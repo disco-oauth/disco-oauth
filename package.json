@@ -1,6 +1,6 @@
 {
   "name": "disco-oauth",
-  "version": "2.7.3",
+  "version": "2.9.1",
   "description": "A library for making the use of discord API easier",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "btoa": "^1.2.1",
+    "random-words": "^1.1.0",
     "request": "^2.88.0"
   },
   "devDependencies": {

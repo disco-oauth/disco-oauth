@@ -11,6 +11,7 @@ class Access{
         this.token = token
         this.type = type
         this.expiry = new Date(Date.now() + expiry*1000).toUTCString()
+        this.expireTimestamp = Date.now() + expiry*1000
         this.refresh = refresh
         this.expires_in = expiry
         this.scope = encodeURIComponent(scope)

@@ -8,6 +8,7 @@ class ParamError{
     constructor(param, type){
         this.missingParam = param;
         this.paramType = type;
+        this.message(`${param} was not specified which is of the type ${type}.`)
     }
 }
 
