@@ -14,7 +14,7 @@ class DiscordUser{
         this.id = id
         this.username = username
         this.discriminator = discriminator
-        this.avatar = `https://cdn.discordapp.com/${id}/${avatar}.${avatar.startsWith('a_') ? 'gif' : 'png'}`
+        this.avatar = `https://cdn.discordapp.com/avatars/${id}/${avatar}.${avatar.startsWith('a_') ? 'gif' : 'png'}`
         if(bot)
             this.isBot = bot
         else
