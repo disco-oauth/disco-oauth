@@ -1,3 +1,5 @@
+// @flow
+
 const btoa = require("btoa");
 const request = require("request");
 const { ConnectionError, ParamError } = require("./Constants/errors");
@@ -10,12 +12,8 @@ const { api_base } = require("./Constants/constants");
 const base = api_base;
 
 /**
- *
- * @param {String} access
- * @param {String} guildId
- * @returns {DiscordGuild}
+ * The Discord OAuth Client
  */
-
 class DiscordClient {
   /**
    * Initialize the client with your client ID and secret.
@@ -59,7 +57,7 @@ class DiscordClient {
   }
 
   /**
-   * Make the request to get the access token.
+   * Make the request to get the access token. The access token will be base64 encrypted and then returned which will be used as the key for future requests.
    * @param {String} code The authorization code to send.
    * @returns {String}
    */
@@ -104,7 +102,7 @@ class DiscordClient {
   }
 
   /**
-   * Get the Access Object of the user whose key is specified.
+   * Get the Access Object of the user whose key is provided.
    * @param {String} key
    * @returns {Access}
    */
@@ -121,7 +119,7 @@ class DiscordClient {
   }
 
   /**
-   * Use the refresh token to get a new access token.
+   * Use the refresh token to get a new access token of the user whose key is provided.
    * @param {String} key The key of the user's access.
    */
   async refreshAccess(key) {
@@ -167,7 +165,7 @@ class DiscordClient {
   }
 
   /**
-   * Get the currently authorized user's connections.
+   * Get the user's connections whose key is provided.
    * @param {String} key The key of the user's access.
    * @returns {Array<Connection>}
    */
@@ -225,7 +223,7 @@ class DiscordClient {
   }
 
   /**
-   * Get the currently authorized user.
+   * Get the user's details whose key is provided.
    * @param {String} key The user's access key.
    * @returns {DiscordUser}
    */
@@ -279,7 +277,7 @@ class DiscordClient {
   }
 
   /**
-   * Get the currently authorized user's guilds.
+   * Get the user's guilds whose key is provided.
    * @param {String} key The user's access key.
    * @returns {Array<DiscordGuild>}
    */
