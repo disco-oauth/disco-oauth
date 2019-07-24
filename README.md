@@ -1,4 +1,4 @@
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+![JavaScript](https://forthebadge.com/images/badges/made-with-javascript.svg)
 [![GitHub issues](https://img.shields.io/github/issues/TheDrone7/disco-oauth.svg?style=for-the-badge)](https://github.com/TheDrone7/disco-oauth/issues)
 [![GitHub stars](https://img.shields.io/github/stars/TheDrone7/disco-oauth.svg?style=for-the-badge)](https://github.com/TheDrone7/disco-oauth/stargazers)
 [![GitHub license](https://img.shields.io/github/license/TheDrone7/disco-oauth.svg?style=for-the-badge)](https://github.com/TheDrone7/disco-oauth/blob/master/LICENSE.md)
