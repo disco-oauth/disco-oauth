@@ -8,15 +8,19 @@
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/preset-flow": "^7.0.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
     "flow-bin": "^0.103.0"
   },
   "scripts": {
     "build": "babel src/ -d lib/",
-    "prepublish": "yarn run build"
+    "prepublish": "yarn run build",
+    "test": "nodemon ./test/test.js"
   },
   "license": "MIT",
   "dependencies": {
     "btoa": "^1.2.1",
+    "jsonwebtoken": "^8.5.1",
     "request": "^2.88.0"
   },
   "repository": {

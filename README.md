@@ -139,22 +139,20 @@ This is the class that is imported on using the `require()` function.
 
     ***
 
-  - **getAccessObject(key)**
+  - **getAccessToken(key)**
 
-    This method can be used to get the [`Access`](#access) of a user. It takes in one parameter i.e. the user's access `key`.
+    This method can be used to get the [`Access`](https://discordapp.com/developers/docs/topics/oauth2#authorization-code-grant-access-token-response) of a user. It takes in one parameter i.e. the user's access `key`.
 
     **Example :-**
 
     ```js
-    let access = oauthClient.getAccessObject(key);
+    let access = oauthClient.getAccessToken(key);
     ```
 
-    **Returns :** An [`Access`](#access) object for the user.
+    **Returns :** An [`Access`](https://discordapp.com/developers/docs/topics/oauth2#authorization-code-grant-access-token-response) object for the user.
 
     **Raises :** [`ParamError`](#paramerror) if the key is not defined.
     [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) if the key is invalid.
-
-    **_Note :_** _The_ [`Access`](#access) _object is the response received when requesting access token._
 
   - **getAuthorizedUser(key)**
 
@@ -208,24 +206,6 @@ This is the class that is imported on using the `require()` function.
     [`ParamError`](#paramerror) when the key is undefined.
 
     **_Note :_** _This needs you to have the_ `connections` _scope._
-
----
-
-## Access
-
-```xml
-Access
-	|-- Token => Your access token
-	|
-	|-- Type => The token type. ( Bearer by default )
-	|
-	|-- Expiry => The date-time when your access token will expire. (String format)
-	|
-	|-- Refresh => Your refresh token. (Used during `refreshAccess()` )
-	|
-	|-- Scope => The scopes in a string format. (formatted as URI)
-	----------------------------------------------------------------------
-```
 
 ---
 

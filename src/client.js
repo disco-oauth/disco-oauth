@@ -1,11 +1,11 @@
 // @flow
 
 const btoa = require("btoa");
+const jwt = require("jsonwebtoken");
 const request = require("request");
 const { ConnectionError, ParamError } = require("./Constants/errors");
 const DiscordUser = require("./DataTypes/user");
 const DiscordGuild = require("./DataTypes/guild");
-const Access = require("./DataTypes/access");
 const Connection = require("./DataTypes/connection");
 const { api_base } = require("./Constants/constants");
 
@@ -24,7 +24,6 @@ class DiscordClient {
     this.id = id;
     this.secret = secret;
     this.creds = btoa(`${id}:${secret}`);
-    this.accesses = {};
   }
 
   /**
@@ -79,14 +78,9 @@ class DiscordClient {
             },
             (err, res, body) => {
               if (!err && (res.statusCode == 200 || res.statusCode == 201)) {
-                this.accesses[btoa(body.access_token)] = new Access(
-                  body.access_token,
-                  body.token_type,
-                  body.expires_in,
-                  body.refresh_token,
-                  body.scope
-                );
-                resolve(btoa(body.access_token));
+                let t = body;
+                t.expireTimestamp = Date.now() + t["expires_in"];
+                resolve(jwt.sign(body, this.creds));
               } else {
                 reject(new ConnectionError(res.statusCode, "Get Access Token"));
               }
@@ -101,34 +95,15 @@ class DiscordClient {
     });
   }
 
-  /**
-   * Get the Access Object of the user whose key is provided.
-   * @param {String} key
-   * @returns {Access}
-   */
-  getAccessObject(key) {
-    if (key) {
-      if (this.accesses[key]) {
-        return this.accesses[key];
-      } else {
-        throw new Error("The access object does not exist.");
-      }
-    } else {
-      throw new ParamError("key", "String");
-    }
-  }
-
-  /**
-   * Use the refresh token to get a new access token of the user whose key is provided.
-   * @param {String} key The key of the user's access.
-   */
   async refreshAccess(key) {
     return new Promise((resolve, reject) => {
       if (key) {
-        if (this.accesses[key]) {
+        try {
+          let token = jwt.verify(key, this.creds);
           let urlToRequest = `${base}oauth2/token?grant_type=refresh_token&refresh_token=${
-            this.accesses[key].refresh_token
+            token.refresh_token
           }&scope=${this.authScope}&redirect_uri=${this.redirect}`;
+
           request(
             urlToRequest,
             {
@@ -140,14 +115,7 @@ class DiscordClient {
             },
             (err, res, body) => {
               if (!err && (res.statusCode == 200 || res.statusCode == 201)) {
-                this.accesses[key] = new Access(
-                  body.access_token,
-                  body.token_type,
-                  body.expires_in,
-                  body.refresh_token,
-                  body.scope
-                );
-                resolve(this);
+                resolve(jwt.sign(body, this.creds));
               } else {
                 reject(
                   new ConnectionError(res.statusCode, "Refresh Access Token")
@@ -155,8 +123,8 @@ class DiscordClient {
               }
             }
           );
-        } else {
-          reject(new ConnectionError(401, "Refresh Access Token"));
+        } catch (e) {
+          reject(e);
         }
       } else {
         reject(new ParamError("key", "String"));
@@ -172,14 +140,15 @@ class DiscordClient {
   async getAuthorizedUserConnections(key) {
     return new Promise((resolve, reject) => {
       if (key) {
-        if (this.accesses[key]) {
-          if (Date.now() < this.accesses[key].expireTimestamp) {
+        try {
+          let token = jwt.verify(key, this.creds);
+          if (Date.now() < token.expireTimestamp) {
             request(
               {
                 url: `${base}/users/@me/connections`,
                 method: "GET",
                 headers: {
-                  Authorization: `Bearer ${this.accesses[key].token}`
+                  Authorization: `Bearer ${token["access_token"]}`
                 },
                 json: true
               },
@@ -213,8 +182,27 @@ class DiscordClient {
           } else {
             reject(new ConnectionError(444, "Get User details"));
           }
-        } else {
-          reject(new ConnectionError(401, "Get User Details"));
+        } catch (e) {
+          reject(e);
+        }
+      } else {
+        reject(new ParamError("key", "String"));
+      }
+    });
+  }
+
+  /**
+   * Get the user's access token response using the key.
+   * @param {String} key The user's access key.
+   */
+  async getAccessToken(key) {
+    return new Promise((resolve, reject) => {
+      if (key) {
+        try {
+          let token = jwt.verify(key, this.creds);
+          resolve(token);
+        } catch (e) {
+          reject(e);
         }
       } else {
         reject(new ParamError("key", "String"));
@@ -230,14 +218,15 @@ class DiscordClient {
   async getAuthorizedUser(key) {
     return new Promise((resolve, reject) => {
       if (key) {
-        if (this.accesses[key]) {
-          if (Date.now() < this.accesses[key].expireTimestamp) {
+        try {
+          let token = jwt.verify(key, this.creds);
+          if (Date.now() < token.expireTimestamp) {
             request(
               {
                 url: `${base}/users/@me`,
                 method: "GET",
                 headers: {
-                  Authorization: `Bearer ${this.accesses[key].token}`
+                  Authorization: `Bearer ${token["access_token"]}`
                 },
                 json: true
               },
@@ -267,8 +256,8 @@ class DiscordClient {
           } else {
             reject(new ConnectionError(444, "Get User details"));
           }
-        } else {
-          reject(new ConnectionError(401, "Get User Details"));
+        } catch (e) {
+          reject(e);
         }
       } else {
         reject(new ParamError("key", "String"));
@@ -284,16 +273,17 @@ class DiscordClient {
   async getAuthorizedUserGuilds(key) {
     return new Promise((resolve, reject) => {
       if (key) {
-        if (this.accesses[key]) {
-          if (Date.now() < this.accesses[key].expireTimestamp) {
+        try {
+          let token = jwt.verify(key, this.creds);
+          if (Date.now() < token.expireTimestamp) {
             let urlToRequest = `${base}users/@me/guilds`;
             request(
               urlToRequest,
               {
                 method: "GET",
                 headers: {
-                  Authorization: `${this.accesses[key].type} ${
-                    this.accesses[key].token
+                  Authorization: `${token["token_type"]} ${
+                    token["access_token"]
                   }`
                 },
                 json: true
@@ -326,8 +316,8 @@ class DiscordClient {
           } else {
             reject(new ConnectionError(444, "Get User Guilds"));
           }
-        } else {
-          reject(new ConnectionError(401, "Get User Guilds"));
+        } catch (e) {
+          reject(e);
         }
       } else {
         reject(new ParamError("key", "String"));
