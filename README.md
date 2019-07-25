@@ -1,3 +1,9 @@
+![JavaScript](https://forthebadge.com/images/badges/made-with-javascript.svg)
+[![GitHub issues](https://img.shields.io/github/issues/TheDrone7/disco-oauth.svg?style=for-the-badge)](https://github.com/TheDrone7/disco-oauth/issues)
+[![GitHub stars](https://img.shields.io/github/stars/TheDrone7/disco-oauth.svg?style=for-the-badge)](https://github.com/TheDrone7/disco-oauth/stargazers)
+[![GitHub license](https://img.shields.io/github/license/TheDrone7/disco-oauth.svg?style=for-the-badge)](https://github.com/TheDrone7/disco-oauth/blob/master/LICENSE.md)
+
+
 # disco-OAuth
 
 This is a library to make oauth requests to discord. It is easy to use and implement in your app, given below are the docs.
