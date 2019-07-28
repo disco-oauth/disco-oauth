@@ -1,6 +1,6 @@
 {
   "name": "disco-oauth",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A library for making the use of discord API easier",
   "main": "lib/client.js",
   "author": "TheDrone7",

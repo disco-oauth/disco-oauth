@@ -34,9 +34,12 @@ class DiscordUser {
     this.id = id;
     this.username = username;
     this.discriminator = discriminator;
-    this.avatar = `https://cdn.discordapp.com/avatars/${id}/${avatar}.${
-      avatar.startsWith("a_") ? "gif" : "png"
-    }`;
+    this.avatar = avatar
+      ? `https://cdn.discordapp.com/avatars/${id}/${avatar}.${
+          avatar.startsWith("a_") ? "gif" : "png"
+        }`
+      : `https://cdn.discordapp.com/embed/avatars/${parseInt(discriminator) %
+          5}.png`;
     if (bot) this.isBot = bot;
     else this.isBot = false;
     if (nitro == 1) this.nitro = "Nitro Classic";
