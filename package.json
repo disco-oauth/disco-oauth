@@ -1,34 +1,32 @@
 {
   "name": "disco-oauth",
-  "version": "3.0.2",
-  "description": "A library for making the use of discord API easier",
+  "version": "4.0.0",
+  "description": "A library to make oauth requests to discord. It is easy to use and implement in your app.",
   "main": "lib/client.js",
-  "author": "TheDrone7",
-  "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-flow": "^7.0.0",
-    "cookie-parser": "^1.4.4",
-    "express": "^4.17.1",
-    "flow-bin": "^0.103.0"
-  },
   "scripts": {
-    "build": "babel src/ -d lib/",
-    "prepublish": "yarn run build",
-    "test": "nodemon ./test/test.js"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "btoa": "^1.2.1",
-    "jsonwebtoken": "^8.5.1",
-    "request": "^2.88.0"
+    "test": "node test/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TheDrone7/disco-oauth.git"
   },
+  "keywords": [
+    "discord",
+    "OAuth2"
+  ],
+  "author": "TheDrone7",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/TheDrone7/disco-oauth/issues"
   },
-  "homepage": "https://github.com/TheDrone7/disco-oauth#readme"
+  "homepage": "https://github.com/TheDrone7/disco-oauth#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "prettier": "^1.18.2"
+  }
 }
