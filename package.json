@@ -1,32 +1,23 @@
 {
   "name": "disco-oauth",
-  "version": "4.0.1",
+  "version": "1.0.0",
   "description": "A library to make oauth requests to discord. It is easy to use and implement in your app.",
-  "main": "lib/client.js",
-  "scripts": {
-    "test": "node test/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TheDrone7/disco-oauth.git"
-  },
-  "keywords": [
-    "discord",
-    "OAuth2"
-  ],
   "author": "TheDrone7",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/TheDrone7/disco-oauth/issues"
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
-  "homepage": "https://github.com/TheDrone7/disco-oauth#readme",
   "dependencies": {
-    "jsonwebtoken": "^8.5.1",
-    "request": "^2.88.0"
+    "nuxt": "^2.0.0",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-0"
   },
   "devDependencies": {
-    "cookie-parser": "^1.4.4",
-    "express": "^4.17.1",
-    "prettier": "^1.18.2"
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4"
   }
 }
