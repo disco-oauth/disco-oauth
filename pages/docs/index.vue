@@ -25,6 +25,7 @@
           <codeblock>
             <p>$ &#8195;yarn add disco-oauth</p>
           </codeblock>
+          <p class="notification is-warning">You can use <strong>TheDrone7/disco-oauth</strong> instead of <strong>disco-oauth</strong> to get the latest under development versions of the library.</p>
           <hr />
           <h1 class="title is-size-5-touch">3. Usage</h1>
           <p>Now that you have installed it, you can use <strong>disco-oauth</strong> however you want to!</p>

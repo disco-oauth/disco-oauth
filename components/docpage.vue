@@ -7,6 +7,7 @@
       </ul>
       <p class="menu-label">Classes</p>
       <ul class="menu-list">
+        <li><nuxt-link exact :to="'/docs/api-error'" :class="{'is-active': title === 'api-error'}">APIError</nuxt-link></li>
         <li><nuxt-link exact :to="'/docs/client'" :class="{'is-active': title === 'client'}">Client</nuxt-link></li>
         <li><nuxt-link exact :to="'/docs/connection'" :class="{'is-active': title === 'connection'}">Connection</nuxt-link></li>
         <li><nuxt-link exact :to="'/docs/connections'" :class="{'is-active': title === 'connections'}">Connections</nuxt-link></li>

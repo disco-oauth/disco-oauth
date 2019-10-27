@@ -41,7 +41,7 @@
             <br />
             <strong>Returns :</strong> (<promise type="resolve"><string /></promise>) A user-specific key, a <a target="_blank" href="https://jwt.io">JWT</a> of the user's <a target="_blank" href="https://discordapp.com/developers/docs/topics/oauth2#authorization-code-grant-access-token-response">access token response</a>. <i>(It is recommended to store this as a session variable.)</i>
             <br />
-            <strong>Raises :</strong> (<promise type="reject"><string /></promise>) Error message.
+            <strong>Raises :</strong> (<promise type="reject"><js-error /></promise>) OR <promise type="reject"><nuxt-link to="/docs/api-error" prefetch exact>APIError</nuxt-link></promise>.
           </li>
           <li class="list-item" id="get-user">
             <h1 class="title is-size-6-touch is-size-4-desktop" style="margin-bottom: 0;">getUser(key) <span class="tag is-success">ASYNC</span> </h1>
@@ -57,7 +57,7 @@
             <br />
             <strong>Returns :</strong> (<promise type="resolve"><nuxt-link exact prefetch :to="'/docs/user'">User</nuxt-link></promise>) Details of the authorized user.
             <br />
-            <strong>Raises :</strong> (<promise type="reject"><string /></promise>) Error message.
+            <strong>Raises :</strong> (<promise type="reject"><js-error /></promise>) OR <promise type="reject"><nuxt-link to="/docs/api-error" prefetch exact>APIError</nuxt-link></promise>.
           </li>
           <li class="list-item" id="get-guilds">
             <h1 class="title is-size-6-touch is-size-4-desktop" style="margin-bottom: 0;">getGuilds(key) <span class="tag is-success">ASYNC</span> </h1>
@@ -73,7 +73,7 @@
             <br />
             <strong>Returns :</strong> (<promise type="resolve"><nuxt-link exact prefetch :to="'/docs/guilds'">Guilds</nuxt-link></promise>) A collection of the user's guilds.
             <br />
-            <strong>Raises :</strong> (<promise type="reject"><string /></promise>) Error message.
+            <strong>Raises :</strong> (<promise type="reject"><js-error /></promise>) OR <promise type="reject"><nuxt-link to="/docs/api-error" prefetch exact>APIError</nuxt-link></promise>.
           </li>
           <li class="list-item" id="get-connections">
             <h1 class="title is-size-6-touch is-size-4-desktop" style="margin-bottom: 0;">getConnections(key) <span class="tag is-success">ASYNC</span> </h1>
@@ -89,7 +89,7 @@
             <br />
             <strong>Returns :</strong> (<promise type="resolve"><nuxt-link exact prefetch :to="'/docs/connections'">Connections</nuxt-link></promise>) A collection of the user's connections.
             <br />
-            <strong>Raises :</strong> (<promise type="reject"><string /></promise>) Error message.
+            <strong>Raises :</strong> (<promise type="reject"><js-error /></promise>) OR <promise type="reject"><nuxt-link to="/docs/api-error" prefetch exact>APIError</nuxt-link></promise>.
           </li>
           <li class="list-item" id="refresh-access">
             <h1 class="title is-size-6-touch is-size-4-desktop" style="margin-bottom: 0;">refreshAccess(key) <span class="tag is-success">ASYNC</span> </h1>
@@ -105,7 +105,7 @@
             <br />
             <strong>Returns :</strong> (<promise type="resolve"><string /></promise>) A new user-specific key.
             <br />
-            <strong>Raises :</strong> (<promise type="reject"><string /></promise>) Error message.
+            <strong>Raises :</strong> (<promise type="reject"><js-error /></promise>) OR <promise type="reject"><nuxt-link to="/docs/api-error" prefetch exact>APIError</nuxt-link></promise>.
           </li>
           <li class="list-item" id="set-redirect">
             <h1 class="title is-size-6-touch is-size-4-desktop" style="margin-bottom: 0;">setRedirect(uri)</h1>
@@ -150,9 +150,10 @@
   import Codeblock from '../../components/codeblock.vue';
   import String from '../../components/typelinks/string'
   import Promise from '../../components/typelinks/promise'
+  import JsError from '../../components/typelinks/jserror'
   export default {
     name: 'client',
-    components: { Promise, String, Codeblock, DocLayout}
+    components: { JsError, Promise, String, Codeblock, DocLayout}
   }
 </script>
 
