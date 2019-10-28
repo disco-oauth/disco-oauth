@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22a1ee07-6688-4a2e-baf6-7729334fe34e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/errors/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/client.js" afterDir="false" />
-    </list>
+    <list default="true" id="22a1ee07-6688-4a2e-baf6-7729334fe34e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +27,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/test/index.js" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.10.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../docs/disco-oauth" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -99,7 +94,7 @@
       <workItem from="1572006290252" duration="2825000" />
       <workItem from="1572009315657" duration="1014000" />
       <workItem from="1572203580961" duration="224000" />
-      <workItem from="1572203887328" duration="2003000" />
+      <workItem from="1572203887328" duration="2116000" />
     </task>
     <servers />
   </component>
