@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+
+<h1><%= title %></h1>
+<p>Welcome to <%= title %>, <strong>the GUILDS page</strong></p>
+<hr />
+<% if (guilds.size > 0) { %>
+    <% guilds.forEach(function (g) { %>
+        <div class="card">
+            <div class="card-image"><img src="<%= g.iconUrl(128) %>" alt="<%= g.name %>"/><br /></div>
+            <div class="card-header">
+                <div class="card-title h5"><%= g.name %></div>
+                <hr />
+            </div>
+        </div>
+        <br />
+    <% }) %>
+<% } else { %>
+    <strong>You are not in any servers! What are you even doing!!!</strong>
+<% } %>
+</body>
+</html>

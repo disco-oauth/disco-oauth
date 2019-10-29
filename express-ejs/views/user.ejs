@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %>, <strong><%= user.username %></strong></p>
+<hr />
+<div class="card">
+    <div class="card-image"><img src="<%= user.avatarUrl(256) %>" alt="User Avatar" /></div>
+    <div class="card-header">
+        <div class="card-title h5">@<%= user.username %>#<%= user.discriminator %></div>
+        <div class="card-subtitle text-gray">ID: <code><%= user.id %></code><hr /></div>
+        <div class="card-body">
+            <strong>Is a bot?</strong> <%= user.bot ? 'Yes' : 'No' %><br />
+            <strong>Discord Nitro:</strong> <%= user.premiumType %><br />
+            <% if (user.userFlags.length > 0) { %>
+            <strong>Flags: </strong>
+                <ul>
+                <% for(let f of user.userFlags) { %><li><%= f %></li><% } %>
+                </ul>
+            <% } %>
+            <hr />
+        </div>
+        <div class="card-footer">
+            <strong>Registered on:</strong> <%= user.createdAt.toUTCString() %><br />
+        </div>
+    </div>
+</div>
+</body>
+</html>

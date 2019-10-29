@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+    <h1><%= title %></h1>
+    <p>You have successfully logged in!</p>
+    <hr />
+    <p>
+        After this successful login, you can view different sorts of data. <br>
+        We received permissions to see your Account's public details and the list of servers you're in!
+    </p>
+    <hr />
+    <a href="/user" class="btn btn-primary">Show my details!</a><br />
+    <a href="/guilds" class="btn btn-primary">Show my servers!</a>
+</body>
+</html>

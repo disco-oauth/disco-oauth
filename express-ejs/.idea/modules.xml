@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/disco-oauth-remake.iml" filepath="$PROJECT_DIR$/.idea/disco-oauth-remake.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/express-ejs.iml" filepath="$PROJECT_DIR$/.idea/express-ejs.iml" />
     </modules>
   </component>
 </project>
