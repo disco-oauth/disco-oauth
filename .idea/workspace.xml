@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22a1ee07-6688-4a2e-baf6-7729334fe34e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/drone.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/drone.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/errors/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/errors/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/types/guild.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/guild.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/types/typedefs.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/typedefs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/types/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.prettier">
+  <component name="RunManager" selected="npm.test">
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -121,7 +114,9 @@
       <workItem from="1572009315657" duration="1014000" />
       <workItem from="1572203580961" duration="224000" />
       <workItem from="1572203887328" duration="2116000" />
-      <workItem from="1572297827916" duration="4261000" />
+      <workItem from="1572297827916" duration="4349000" />
+      <workItem from="1572336272287" duration="67000" />
+      <workItem from="1572386805297" duration="337000" />
     </task>
     <servers />
   </component>
