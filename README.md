@@ -3,6 +3,17 @@ Available on [disco-oauth.tk](https://disco-oauth.tk).
 
 ---
 
+### How to use examples
+
+You can download these examples simply by cloning or downloading this repository as zip. Open up the respective example's directory in your preferred terminal and run 
+```shell script
+npm install && npm start
+```
+
+You can also check out the live examples, the link to which is provided in the respective example's README.
+
+---
+
 ### Contributing
 
 Anyone can fork this repo and make desired changes and create a pull request. Your pull request will be accepted and merged with the respective branch if: -
