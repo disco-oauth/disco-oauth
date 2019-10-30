@@ -1,7 +1,7 @@
 # Express-EJS example
 
 This is an example website for [disco-oauth](https://disco-oauth.tk). Technologies used: -
-- [ExpressJS](https://expressjs.org) for the backend.
+- [ExpressJS](https://expressjs.com) for the backend.
 - [EJS](https://ejs.co) templating engine for the frontend.
 
 ---
