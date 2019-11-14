@@ -1,0 +1,41 @@
+@import url("https://unpkg.com/spectre.css/dist/spectre.min.css");
+
+body {
+  padding: 16px;
+  background: #333;
+  color: #ddddff;
+}
+
+h1, strong {
+  color: white;
+}
+
+.card {
+  background: #232323;
+  padding: 12px;
+  width: max-content;
+  max-width: 100%;
+  text-align: center;
+}
+
+.card-image img {
+  border-radius: 50% !important;
+}
+
+.card * {
+  max-width: 100%;
+}
+
+.card-body {
+  text-align: start;
+}
+
+.btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
+}
+
+a:not(.btn) {
+  color: #00D7FF !important;
+}

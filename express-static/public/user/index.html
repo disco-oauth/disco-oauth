@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script>
+      fetch('/is-authorized').then(response => {
+        if (response.status === 404) window.location.href = '/';
+        else {
+          fetch('/get-user').then(res => {
+            if (res.status === 200) res.json().then(user=>{
+              document.getElementById('name').innerHTML = `@${user.username}#${user.discriminator}`;
+              document.getElementById('avatar').setAttribute('src', user.avatar);
+              document.getElementById('id').innerHTML = user.id;
+              document.getElementById('bot').innerHTML = user.bot ? 'Yes' : 'No';
+              document.getElementById('nitro').innerHTML = user.nitro;
+              document.getElementById('flags').innerHTML = '';
+              if(user.flags.length > 0) {
+                document.getElementById('flags').innerHTML += '<strong>Flags: </strong><ul>';
+                for (let x of user.flags) {
+                  document.getElementById('flags').innerHTML += `<li>${x}</li>`;
+                }
+                document.getElementById('flags').innerHTML += '</ul>';
+              }
+              document.getElementById('date').innerHTML = user.registered;
+            });
+          });
+        }
+      });
+    </script>
+    <title>Express-Static</title>
+</head>
+<body>
+    <h1>Express-Static</h1>
+    <p v-if="user">Welcome to Express-Static</p>
+    <hr />
+    <div class="card">
+        <div class="card-image"><img src="" id="avatar" alt="User Avatar" /></div>
+        <div class="card-header">
+            <div class="card-title h5" id="name"></div>
+            <div class="card-subtitle text-gray">ID: <code id="id"></code><hr /></div>
+            <div class="card-body">
+                <strong>Is a bot?</strong> <span id="bot"></span><br />
+                <strong>Discord Nitro:</strong> <span id="nitro"></span><br />
+                <div id="flags"></div>
+                <hr />
+            </div>
+            <div class="card-footer">
+                <strong>Registered on:</strong> <span id="date"></span><br />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        fetch('/is-authorized').then(response => {
+          if (response.status === 404) window.location.href = '/';
+        });
+    </script>
+    <title>Express-Static</title>
+</head>
+<body>
+
+    <h1>Express-Static</h1>
+    <p>You have successfully logged in!</p>
+    <hr />
+    <p>
+        After this successful login, you can view different sorts of data. <br>
+        We received permissions to see your Account's public details and the list of servers you're in!
+    </p>
+    <hr />
+    <a href="/user" class="btn btn-primary">Show my details!</a><br />
+    <a href="/guilds" class="btn btn-primary">Show my servers!</a>
+
+</body>
+</html>

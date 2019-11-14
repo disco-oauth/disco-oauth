@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script>
+      fetch('/is-authorized').then(response => {
+        if (response.status === 404) window.location.href = '/';
+        else {
+          fetch('/get-guilds').then(res => {
+            if (res.status === 200) res.json().then(guilds=>{
+              if (Object.keys(guilds).length > 0) {
+                document.getElementById('guilds').innerHTML = '';
+                Object.values(guilds).forEach(g => {
+                  document.getElementById('guilds').innerHTML +=
+                    `<div class="card">
+                        <div class="card-image"><img src="${g.icon}" alt="${g.name}"/><br /></div>
+                        <div class="card-header">
+                           <div class="card-title h5">${g.name}</div>
+                            <hr />
+                        </div>
+                    </div>
+                    <br />`;
+                });
+              }
+              else {
+                guilds.innerHTML = '<strong>You are not in any servers! What are you even doing!!!</strong>';
+              }
+            });
+          });
+        }
+      });
+    </script>
+    <title>Express-Static</title>
+</head>
+<body>
+    <h1>Express-Static</h1>
+    <p v-if="user">Welcome to <strong>the GUILDS page</strong></p>
+    <hr />
+    <div id="guilds"></div>
+</body>
+</html>
