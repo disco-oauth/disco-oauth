@@ -10,7 +10,7 @@
         <ul class="list">
           <li class="list-item">
             <h1 class="title is-size-6-touch is-size-4-desktop" style="margin-bottom: 0;">toJSON()</h1>
-            <p>Generates a link to the guild's icon of desired size.</p>
+            <p>Returns a JSON object containing a key-value pairs with the key being the guild ID and the value being the guild object.</p>
             <br />
             <strong>Example: -</strong>
             <codeblock>myGuilds.toJSON();</codeblock>
