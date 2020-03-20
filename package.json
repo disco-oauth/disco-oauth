@@ -3,6 +3,7 @@
   "version": "4.2.1",
   "description": "A library to make oauth requests to discord. It is easy to use and implement in your app.",
   "main": "lib/client.js",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "scripts": {
     "test": "node test/index.js",
     "prepublish": "prettier --config ./.prettierrc --write \"./lib/**/*.js\""
