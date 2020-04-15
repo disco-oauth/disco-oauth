@@ -1,6 +1,6 @@
 {
   "name": "disco-oauth",
-  "version": "4.2.7",
+  "version": "4.2.6",
   "description": "A library to make oauth requests to discord. It is easy to use and implement in your app.",
   "main": "lib/client.js",
   "scripts": {
