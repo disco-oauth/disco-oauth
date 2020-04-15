@@ -23,7 +23,8 @@
   "homepage": "https://github.com/TheDrone7/disco-oauth#readme",
   "dependencies": {
     "jsonwebtoken": "^8.5.1",
-    "phin": "^3.4.1"
+    "phin": "^3.4.1",
+    "uid": "^1.0.0"
   },
   "devDependencies": {
     "cookie-parser": "^1.4.5",
