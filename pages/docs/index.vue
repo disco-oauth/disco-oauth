@@ -1,91 +1,61 @@
 <template>
   <div>
-    <div class="container">
-      <div>
-        <h1 class="title">Getting started</h1>
-        <p>Get started with disco-oauth and implementation of discord's OAuth2 API in your own webapps!</p>
-      </div>
-      <divider />
-      <a
-        class="scroll-link"
-        href="#installation"
-      >
-        Installation<br/><i class="fas fa-chevron-down"/>
-      </a>
-    </div>
-    <div class="container" id="installation">
-      <div class="left-aligned topic">
-        <h1 class="title-small">Installation</h1>
-        <p>To install the disco-oauth library, in your preferred command-line client (such as command prompt or powershell on Windows or terminal on Linux or Mac) enter the following command: -</p>
-        <code>npm install --save disco-oauth</code>&#8195;&#8195;<strong>OR</strong>&#8195;&#8195;<code>yarn add disco-oauth</code>
-      </div>
-      <divider />
-      <div class="left-aligned topic">
-        <h1 class="title-small">Quick setup</h1>
-        <p>Given below is a quick example of how to set-up the library inside your code.</p>
-        <img src="~/assets/carbon.png" alt="code" />
-      </div>
+    <div class="section">
+      <doc-layout title="get-started">
+        <h1 class="title is-size-2-desktop"><u>Get Started</u></h1>
+
+        <div class="section">
+          <h1 class="title is-size-5-touch">1. Pre-requisite knowledge</h1>
+          <p>We expect you to be familiar with the following technologies: -</p>
+          <ul>
+            <li><a href="https://nodejs.org" target="_blank">Node.js</a></li>
+            <li><a href="https://npmjs.com" target="_blank">NpmJs</a></li>
+            <li><a href="https://oauth.net/2/" target="_blank">OAuth2</a></li>
+            <li><a href="https://restfulapi.net" target="_blank">Restful APIs</a></li>
+          </ul>
+          <hr />
+          <h1 class="title is-size-5-touch">2. Installation</h1>
+          <p><strong>Disco-OAuth</strong> can be installed using <code>npm</code> or <code>yarn</code> whichever you prefer!</p>
+          <br />
+          <p>NPM users can use the following command in their preferred command line tool: -</p>
+          <codeblock>
+            <p>$ &#8195;npm install --save disco-oauth</p>
+          </codeblock>
+          <p>While the yarn users can use the following command in their preferred command line tool: -</p>
+          <codeblock>
+            <p>$ &#8195;yarn add disco-oauth</p>
+          </codeblock>
+          <p class="notification is-warning">You can use <strong>TheDrone7/disco-oauth</strong> instead of <strong>disco-oauth</strong> to get the latest under development versions of the library.</p>
+          <hr />
+          <h1 class="title is-size-5-touch">3. Usage</h1>
+          <p>Now that you have installed it, you can use <strong>disco-oauth</strong> however you want to!</p>
+          <p>To get started, you can import in your <code>.js</code> file as shown below: -</p>
+          <codeblock>
+            <p>
+              const OAuthClient = require('disco-oauth');<br />
+              const Client = new OAuthClient('my-discord-app-id', 'my-discord-app-secret');
+            </p>
+          </codeblock>
+          <p>Normally, you'd want to keep the <strong>app secret</strong> hidden. You can achieve this by storing it as an environment variable and then accessing it using <code>process.env.mySecret</code></p>
+          <p>The above 2 lines will instantiate an OAuthClient for your app to be used.<br /><nuxt-link exact prefetch :to="'/docs/client'">Click here</nuxt-link> to view documentations for the <strong>Client</strong> class.</p>
+        </div>
+      </doc-layout>
     </div>
   </div>
 </template>
 
 <script>
-  import Divider from '../../components/divider'
+  import docLayout from '../../components/docpage.vue';
+  import codeblock from  '../../components/codeblock.vue';
   export default {
-    components: { Divider },
-    layout: 'docs'
+    name: 'docs',
+    components: {docLayout, codeblock}
   }
 </script>
 
-<style>
-  .container {
-    margin: 0 auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-  }
-
-  .title {
-    font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    display: block;
-    font-weight: 400;
-    font-size: 4em;
-    letter-spacing: 1px;
-    color: #fff;
-  }
-
-  .title-small {
-    font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    display: block;
-    font-weight: 300;
-    font-size: 2.5em;
-    letter-spacing: 1px;
-    color: #fff;
-  }
-
-  .subtitle {
-    font-weight: 300;
-    font-size: 42px;
-    word-spacing: 5px;
-    padding-bottom: 15px;
-    color: #bfbfbf;
-  }
-
-  .links {
-    padding-top: 15px;
-  }
-
-  p, ul {
-    margin-top: 24px;
-    margin-bottom: 12px;
-    font-size: 1.25em;
-    font-weight: 400;
-    line-height: 1.5em;
-    max-width: 720px;
+<style scoped>
+  ul {
+    list-style-type: disc !important;
+    margin-left: 24px;
   }
 </style>

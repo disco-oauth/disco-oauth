@@ -1,148 +1,81 @@
 <template>
-  <div>
-    <div class="container">
-      <div>
-        <h1 class="title">
-          disco-oauth
-        </h1>
-        <h2 class="subtitle">
-          Implement discord&#39;s oauth API in your webapp, the easy way.
-        </h2>
-        <div class="links">
-          <nuxt-link
-            class="button--green"
-            exact
-            prefetch
-            to="/docs"
-          >
-            <i class="fas fa-book" />&#8195;Documentation
-          </nuxt-link>
-          <a
-            class="button--blurple"
-            href="https://discord.gg/4mmeuEV"
-            target="_blank"
-          >
-            <i class="fab fa-discord"/>&#8195;Support
-          </a>
-        </div>
-        <div class="links">
-          <a
-            class="button--amber"
-            href="https://www.npmjs.com/package/disco-oauth"
-            target="_blank"
-          >
-            <i class="fab fa-npm" />&#8195;NPM
-          </a>
-          <a
-            class="button--white"
-            href="https://github.com/TheDrone7/disco-oauth"
-            target="_blank"
-          >
-            <i class="fab fa-github"/>&#8195;GitHub
-          </a>
-        </div>
+  <div class="hero has-text-centered">
+    <div class="hero-head section">
+      <h1 class="title is-1">
+        <u>Disco-OAuth</u>
+      </h1>
+      <h2 class="title is-4">
+        <code>npm install --save disco-oauth</code><br />
+      </h2>
+    </div>
+    <div class="hero-body">
+      <div class="tags is-centered">
+        <a href="https://www.npmjs.com/package/disco-oauth" target="_blank"><img src="https://img.shields.io/npm/v/disco-oauth?style=for-the-badge" alt="Version" /></a>
+        <a href="https://www.npmjs.com/package/disco-oauth" target="_blank"><img src="https://img.shields.io/npm/dt/disco-oauth?style=for-the-badge" alt="NPM downloads" /></a>
+        <a href="https://www.npmjs.com/package/disco-oauth" target="_blank"><img src="https://img.shields.io/librariesio/release/npm/disco-oauth?style=for-the-badge" alt="Dependencies" /></a>
+        <a href="https://github.com/TheDrone7/disco-oauth/issues" target="_blank"><img src="https://img.shields.io/github/issues/TheDrone7/disco-oauth?style=for-the-badge" alt="Github issues" /></a>
       </div>
-      <div class="end">
-        <a
-          class="scroll-link"
-          href="#about"
-        >
-          Learn More<br/><i class="fas fa-chevron-down"/>
-        </a>
+      <br />
+      <div class="columns">
+        <div class="column">
+          <div class="box">
+            <h1 class="title is-4">About</h1>
+            <p class="content has-text-left">
+              Disco-OAuth is a small <a href="https://nodejs.org/">Node.js</a> library that eases the implementation of
+              <a href="https://discordapp.com/developers/docs/topics/oauth2">Discord OAuth2 API</a> in your backend servers.
+              <br /><br />
+              It is an object-oriented library giving you the ease of use and good quality at the same time!
+              <br /><br />
+              This is also frequently updated to provide all the cool new stuff that discord launches for users and developers alike.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <h1 class="title is-4">Why disco-oauth?</h1>
+            <ul class="content has-text-left">
+              <li>Object-Oriented</li>
+              <li>Quick setup</li>
+              <li>Easy to use</li>
+              <li>Efficient</li>
+              <li>Fast</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="container" id="about">
-      <div>
-        <h1 class="title-small">About</h1>
-        <p>
-          Disco-OAuth is a small Node.js library that eases the implementation of Discord OAuth2 API in your backend servers.
-          It is an object-oriented library giving you the ease of use and good quality at the same time!
-          This is also frequently updated to provide all the cool new stuff that discord launches for users and developers alike.
-        </p>
-      </div>
-      <divider />
-      <div>
-        <h1 class="title-small">Why disco-oauth?</h1>
-        <p>
-          Below are some features that explain why you should use disco-oauth
-        </p>
-        <ul>
-          <li>Fast</li>
-          <li>Object Oriented</li>
-          <li>Quick setup</li>
-          <li>Small size</li>
-          <li>Easy to use</li>
-          <li>Efficient</li>
-        </ul>
-      </div>
-      <div class="end">
-        <a
-          class="scroll-link"
-          href="#"
-        >
-          <i class="fas fa-chevron-up"/><br/>Go back
-        </a>
-      </div>
+    <div class="hero-buttons">
+      <nuxt-link to="/docs" exact prefetch class="button is-success">Get Started</nuxt-link>
+      <a target="_blank" href="https://discord.gg/4mmeuEV" class="button blurple">Join Discord</a>
+      <hr />
     </div>
   </div>
 </template>
 
 <script>
-  import Divider from '../components/divider'
-  export default {
-    components: { Divider }
-  }
+export default {}
 </script>
 
 <style>
-  .container {
-    margin: 0 auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
+  ul {list-style-type: disc; margin-left: 12px;}
+  .blurple {
+    color: #ffffff;
+    background-color: #406da2;
+    border: 1px solid #406da2;
   }
-
-  .title {
-    font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    display: block;
-    font-weight: 400;
-    font-size: 100px;
-    letter-spacing: 1px;
-    color: #fff;
+  .blurple:hover {
+    border: 1px solid #405ca1;
+    background-color: #405ca1;
   }
-
-  .title-small {
-    font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    display: block;
-    font-weight: 300;
-    font-size: 42px;
-    letter-spacing: 1px;
-    color: #fff;
+  .box {
+    box-shadow: 0 0 12px #343434;
+    border-radius: 16px;
   }
-
-  .subtitle {
-    font-weight: 300;
-    font-size: 42px;
-    word-spacing: 5px;
-    padding-bottom: 15px;
-    color: #bfbfbf;
+  code {
+    background-color: black;
+    color: #33ff00;
   }
-
-  .links {
-    padding-top: 15px;
-  }
-
-  p, ul {
-    margin-top: 24px;
-    font-size: 1.25em;
-    font-weight: 400;
-    line-height: 1.5em;
-    max-width: 720px;
-    text-align: left;
+  .tags > * {
+    margin: 8px;
   }
 </style>
