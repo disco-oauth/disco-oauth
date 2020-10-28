@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@300;400&display=swap');
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #303030;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+body {
+  background-color: #303030;
+  color: #dfdfdf;
+  font-family: 'Raleway', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.button--green {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #00BB8F;
+  color: #00BB8F;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-size: 1.5em;
+  transition: background-color 200ms linear;
+}
+
+.button--green:hover {
+  color: #fff;
+  background-color: #00BB8F;
+}
+
+.button--blurple {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #7289DA;
+  color: #7289DA;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+  font-size: 1.5em;
+  transition: background-color 200ms linear;
+}
+
+.button--blurple:hover {
+  color: #fff;
+  background-color: #7289DA;
+}
+
+.button--amber {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #B28500;
+  color: #B28500;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+  font-size: 1.5em;
+  transition: background-color 200ms linear;
+}
+
+.button--amber:hover {
+  color: #fff;
+  background-color: #B28500;
+}
+
+.button--white {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+  font-size: 1.5em;
+  transition: background-color 200ms linear;
+}
+
+.button--white:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.scroll-link {
+  display: inline-block;
+  color: #999999;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+  font-size: 1.5em;
+  transition: color 200ms linear;
+}
+
+.scroll-link:hover {
+  color: #dfdfdf;
+  font-weight: 500;
+}
