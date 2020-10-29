@@ -1,5 +1,5 @@
 # Documentation
-Available on [disco-oauth.tk](https://disco-oauth.tk).
+Available on [disco-oauth.now.sh](https://disco-oauth.now.sh).
 
 ---
 
