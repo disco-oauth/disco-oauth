@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22a1ee07-6688-4a2e-baf6-7729334fe34e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +27,10 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="FileColors">
+    <fileColor scope="Local Unit Tests" color="Green" />
+    <fileColor scope="Android Instrumented Tests" color="Green" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -44,16 +53,17 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/test/index.js" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.14.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../documentation/disco-oauth" />
+    <property name="javascript.nodejs.core.library.configured.version" value="15.5.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.22" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,6 +74,7 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="npm.test">
     <configuration default="true" type="js.build_tools.npm">
@@ -76,11 +87,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="prettier" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="prepublishOnly" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="prettier" />
+        <script value="prepublishOnly" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -96,9 +107,13 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.test" />
+      <item itemvalue="npm.prepublishOnly" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.prettier" />
+        <item itemvalue="npm.prepublishOnly" />
       </list>
     </recent_temporary>
   </component>
@@ -114,6 +129,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -144,57 +160,23 @@
       <workItem from="1586857603170" duration="784000" />
       <workItem from="1586879238658" duration="2280000" />
       <workItem from="1586946249938" duration="3245000" />
+      <workItem from="1611422376777" duration="2432000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1586858382212">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586858382212" />
-    <state width="1879" height="261" key="GridCell.Tab.0.bottom" timestamp="1586857117383">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1879" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586857117383" />
-    <state width="1879" height="261" key="GridCell.Tab.0.center" timestamp="1586857117383">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1879" height="261" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586857117383" />
-    <state width="1879" height="261" key="GridCell.Tab.0.left" timestamp="1586857117383">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1879" height="261" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586857117383" />
-    <state width="1879" height="261" key="GridCell.Tab.0.right" timestamp="1586857117383">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1879" height="261" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586857117383" />
-    <state x="491" y="163" key="SettingsEditor" timestamp="1586857341363">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="491" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586857341363" />
-    <state x="826" y="386" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1586857298481">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="826" y="386" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586857298481" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586857329007">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586857329007" />
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
