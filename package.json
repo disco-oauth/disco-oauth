@@ -1,11 +1,13 @@
 {
   "name": "disco-oauth",
-  "version": "4.2.6",
+  "version": "5.0.0",
   "description": "A library to make oauth requests to discord. It is easy to use and implement in your app.",
-  "main": "lib/client.js",
+  "main": "index.js",
   "scripts": {
-    "test": "node test/index.js",
-    "prepublishOnly": "prettier --config ./.prettierrc --write \"./lib/**/*.js\""
+    "test": "nodemon test/index.js",
+    "format": "prettier --config ./.prettierrc --write \"./lib/**/*.js\"",
+    "lint": "eslint --fix lib/**",
+    "prepublishOnly": "npm run format && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
   },
   "devDependencies": {
     "cookie-parser": "^1.4.5",
+    "eslint": "^7.18.0",
     "express": "^4.17.1",
     "prettier": "^2.1.2"
   }

@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22a1ee07-6688-4a2e-baf6-7729334fe34e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/errors/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/errors/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/types/connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/types/guild.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/guild.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/types/typedefs.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/typedefs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/types/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +51,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupnpm">
       <scroll-view-position x="0" y="0" />
@@ -56,6 +73,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -73,10 +91,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="0d570cb2-96df-43cc-80da-7f777e6d0afe" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="npm.test">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programs\disco-oauth\master\disco-oauth" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.prepublishOnly">
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -160,7 +183,16 @@
       <workItem from="1586857603170" duration="784000" />
       <workItem from="1586879238658" duration="2280000" />
       <workItem from="1586946249938" duration="3245000" />
-      <workItem from="1611422376777" duration="2432000" />
+      <workItem from="1611422376777" duration="2919000" />
+      <workItem from="1611471937530" duration="39000" />
+      <workItem from="1611676370796" duration="5029000" />
+      <workItem from="1611728239117" duration="504000" />
+      <workItem from="1611920263818" duration="620000" />
+      <workItem from="1611992263763" duration="3422000" />
+      <workItem from="1612002341779" duration="4921000" />
+      <workItem from="1612022374384" duration="15000" />
+      <workItem from="1612022401842" duration="10000" />
+      <workItem from="1612022426715" duration="6940000" />
     </task>
     <servers />
   </component>
@@ -178,5 +210,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
