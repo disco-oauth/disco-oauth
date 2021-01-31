@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22a1ee07-6688-4a2e-baf6-7729334fe34e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/helpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/errors/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/errors/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/types/connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/types/guild.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/guild.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/types/typedefs.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/typedefs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/types/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +46,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupnpm">
       <scroll-view-position x="0" y="0" />
@@ -91,7 +81,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="0d570cb2-96df-43cc-80da-7f777e6d0afe" />
+    <property name="settings.editor.selected.configurable" value="zielu.gittoolbox.app.config" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -105,6 +95,26 @@
       <command value="run" />
       <scripts>
         <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="format" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="format" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -133,10 +143,14 @@
     <list>
       <item itemvalue="npm.test" />
       <item itemvalue="npm.prepublishOnly" />
+      <item itemvalue="npm.format" />
+      <item itemvalue="npm.lint" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.prepublishOnly" />
+        <item itemvalue="npm.lint" />
+        <item itemvalue="npm.format" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +206,8 @@
       <workItem from="1612002341779" duration="4921000" />
       <workItem from="1612022374384" duration="15000" />
       <workItem from="1612022401842" duration="10000" />
-      <workItem from="1612022426715" duration="6940000" />
+      <workItem from="1612022426715" duration="7243000" />
+      <workItem from="1612030488208" duration="819000" />
     </task>
     <servers />
   </component>
