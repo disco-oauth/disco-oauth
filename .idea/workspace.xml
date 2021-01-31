@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22a1ee07-6688-4a2e-baf6-7729334fe34e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/node.js.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/npm-publish.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/middlewares/express.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/middlewares/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/middlewares/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +99,7 @@
       <recent name="E:\Programs\disco-oauth\master\disco-oauth" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.prepublishOnly">
+  <component name="RunManager" selected="npm.test">
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -208,6 +218,7 @@
       <workItem from="1612022401842" duration="10000" />
       <workItem from="1612022426715" duration="7243000" />
       <workItem from="1612030488208" duration="819000" />
+      <workItem from="1612101555016" duration="5595000" />
     </task>
     <servers />
   </component>

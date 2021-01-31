@@ -1,5 +1,5 @@
 # Documentation
-Available on [disco-oauth.now.sh](https://disco-oauth.now.sh).
+Available on [disco-oauth.vercel.app](https://disco-oauth.vercel.app).
 
 ---
 
@@ -11,6 +11,8 @@ Anyone can fork this repo and make desired changes and create a pull request. Yo
 3. It follows the coding style followed throughout the library.
 
 If (1) or (2) is not followed, the pull request will be rejected right away.
+
+To ensure (2) is followed, be sure to run the `format` and `lint` scripts or simply run the `prepublishOnly` script.
 
 If (3) is not followed, I will make the desired changes myself in a way that it follows (3).
 

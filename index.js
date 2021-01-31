@@ -1,6 +1,6 @@
 const Client = require('./lib/client')
-const helpers = require('./lib/helpers');
+const middlewares = require('./lib/middlewares');
 
 module.exports = {
-  Client, ...helpers
+  Client, ...middlewares
 }

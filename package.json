@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheDrone7/disco-oauth.git"
+    "url": "git+https://github.com/disco-oauth/disco-oauth.git"
   },
   "keywords": [
     "discord",
@@ -20,9 +20,9 @@
   "author": "hsbhatia7",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TheDrone7/disco-oauth/issues"
+    "url": "https://github.com/disco-oauth/disco-oauth/issues"
   },
-  "homepage": "https://github.com/TheDrone7/disco-oauth#readme",
+  "homepage": "https://github.com/disco-oauth/disco-oauth#readme",
   "dependencies": {
     "jsonwebtoken": "^8.5.1",
     "phin": "^3.5.0",
