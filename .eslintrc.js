@@ -33,15 +33,6 @@ module.exports = {
       'error',
       'always'
     ],
-    'array-bracket-spacing': [
-      'error',
-      'always',
-      {
-        'singleValue': false,
-        'objectsInArrays': false,
-        'arraysInArrays': false
-      }
-    ],
     'block-spacing': 'error',
     'brace-style': [
       'error',
