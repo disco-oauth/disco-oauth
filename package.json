@@ -4,8 +4,7 @@
   "description": "A library to make oauth requests to discord. It is easy to use and implement in your app.",
   "main": "index.js",
   "scripts": {
-    "testExpress": "nodemon test/express.js",
-    "testKoa": "nodemon test/koa.js",
+    "test": "nodemon test/index.js",
     "format": "prettier --config ./.prettierrc --write \"./lib/**/*.js\"",
     "lint": "eslint --fix lib/**",
     "prepublishOnly": "npm run format && npm run lint"
@@ -33,7 +32,6 @@
     "cookie-parser": "^1.4.5",
     "eslint": "^7.18.0",
     "express": "^4.17.1",
-    "koa": "^2.13.1",
     "prettier": "^2.1.2"
   }
 }
