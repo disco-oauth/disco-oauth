@@ -45,6 +45,8 @@ module.exports = {
       'error',
       { 'position': 'beside' }
     ],
+    'no-var': 'error',
+    'prefer-const': 'error',
     'multiline-ternary': 'off',
     'getter-return': 'off',
     'no-async-promise-executor': 'off'
