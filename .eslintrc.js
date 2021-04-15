@@ -49,6 +49,15 @@ module.exports = {
     'prefer-const': 'error',
     'multiline-ternary': 'off',
     'getter-return': 'off',
-    'no-async-promise-executor': 'off'
+    'no-async-promise-executor': 'off',
+    'require-jsdoc': ['error', {
+      require: {
+        'FunctionDeclaration': true,
+        'MethodDefinition': true,
+        'ClassDeclaration': true,
+        'ArrowFunctionExpression': true,
+        'FunctionExpression': true
+      }
+    }]
   }
 };
