@@ -19,4 +19,4 @@ for (const dClass of classes) {
 }
 
 for (const k of Object.keys(output))
-  fs.writeFileSync('docs/' + k + '.json', JSON.stringify(output[k], '', 2));
+  fs.writeFileSync('docs/' + k + '.json', JSON.stringify(output[k], null, 2));
